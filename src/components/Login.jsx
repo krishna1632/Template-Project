@@ -5,8 +5,8 @@ import { CiUser } from "react-icons/ci";
 import { Shield, User, BookOpen, Calculator, Phone, Users } from "lucide-react";
 const Login = () => {
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-indigo-50 min-h-screen w-full flex justify-center items-center p-4 sm:p-6">
-      <div className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:w-[400px] bg-white p-4 sm:p-6 md:p-8 rounded-xl shadow-xl border border-gray-100">
+    <div className="bg-gradient-to-br from-blue-50 to-indigo-50 min-h-screen w-full flex justify-center items-center p-4 sm:p-6 ">
+      <div className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:w-[400px] bg-white p-4 sm:p-6 md:p-8 rounded-xl shadow-xl border border-gray-100 ">
         <div className="text-center mb-4 sm:mb-6">
           <h1 className="text-xl sm:text-2xl font-bold text-gray-800 mb-1">
             Admin Portal
@@ -17,22 +17,40 @@ const Login = () => {
         </div>
 
         <div className="mb-3 sm:mb-4 relative">
-          <input
-            type="text"
-            placeholder="Username"
-            className="border border-gray-200 w-full h-10 sm:h-12 px-4 pl-10 sm:pl-11 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-          />
-          <FaUser className="absolute top-3 sm:top-4 left-3 sm:left-4 text-gray-400" />
-        </div>
+  <div className="relative">
+    <input
+      type="text"
+      className="border border-gray-200 w-full h-10 sm:h-12 px-4 pt-2 pl-10 sm:pl-11 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all peer"
+      placeholder=" "
+    />
+    <label className="absolute left-10 text-gray-400 pointer-events-none transition-all duration-200 
+      peer-placeholder-shown:text-base peer-placeholder-shown:top-3
+      peer-placeholder-shown:sm:text-base peer-placeholder-shown:sm:top-4
+      text-xs top-1 sm:top-1.5 sm:text-xs
+      peer-focus:text-xs peer-focus:top-1 peer-focus:sm:text-xs peer-focus:sm:top-1.5">
+      Username
+    </label>
+    <FaUser className="absolute top-3 sm:top-4 left-3 sm:left-4 text-gray-400" />
+  </div>
+</div>
 
-        <div className="mb-4 sm:mb-6 relative">
-          <input
-            type="password"
-            placeholder="Password"
-            className="border border-gray-200 w-full h-10 sm:h-12 px-4 pl-10 sm:pl-11 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-          />
-          <FaLock className="absolute top-3 sm:top-4 left-3 sm:left-4 text-gray-400" />
-        </div>
+<div className="mb-4 sm:mb-6 relative">
+  <div className="relative">
+    <input
+      type="password"
+      className="border border-gray-200 w-full h-10 sm:h-12 px-4 pt-2 pl-10 sm:pl-11 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all peer"
+      placeholder=" "
+    />
+    <label className="absolute left-10 text-gray-400 pointer-events-none transition-all duration-200 
+      peer-placeholder-shown:text-base peer-placeholder-shown:top-3
+      peer-placeholder-shown:sm:text-base peer-placeholder-shown:sm:top-4
+      text-xs top-1 sm:top-1.5 sm:text-xs
+      peer-focus:text-xs peer-focus:top-1 peer-focus:sm:text-xs peer-focus:sm:top-1.5">
+      Password
+    </label>
+    <FaLock className="absolute top-3 sm:top-4 left-3 sm:left-4 text-gray-400" />
+  </div>
+</div>
 
         <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white w-full h-10 sm:h-12 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 font-medium text-sm sm:text-base cursor-pointer">
           Sign In

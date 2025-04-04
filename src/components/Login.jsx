@@ -2,7 +2,7 @@ import { FaUser, FaLock } from "react-icons/fa";
 import { IoIosKey } from "react-icons/io";
 import { TbWheel } from "react-icons/tb";
 import { CiUser } from "react-icons/ci";
-
+import { Shield, User, BookOpen, Calculator, Phone, Users } from "lucide-react";
 const Login = () => {
   return (
     <div className="bg-gradient-to-br from-blue-50 to-indigo-50 min-h-screen w-full flex justify-center items-center p-4 sm:p-6">
@@ -34,30 +34,41 @@ const Login = () => {
           <FaLock className="absolute top-3 sm:top-4 left-3 sm:left-4 text-gray-400" />
         </div>
 
-        <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white w-full h-10 sm:h-12 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 font-medium text-sm sm:text-base">
+        <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white w-full h-10 sm:h-12 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 font-medium text-sm sm:text-base cursor-pointer">
           Sign In
         </button>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 mt-4 sm:mt-6">
-          <button className="bg-blue-700 hover:bg-blue-800 text-white py-1 sm:py-2 rounded-lg text-xs transition-colors">
-            Super Admin
-          </button>
-          <button className="bg-blue-500 hover:bg-blue-600 text-white py-1 sm:py-2 rounded-lg text-xs transition-colors">
-            Admin
-          </button>
-          <button className="bg-purple-500 hover:bg-purple-600 text-white py-1 sm:py-2 rounded-lg text-xs transition-colors">
-            Teacher
-          </button>
-          <button className="bg-gray-600 hover:bg-gray-700 text-white py-1 sm:py-2 rounded-lg text-xs transition-colors">
-            Accountant
-          </button>
-          <button className="bg-red-500 hover:bg-red-600 text-white py-1 sm:py-2 rounded-lg text-xs transition-colors">
-            Receptionist
-          </button>
-          <button className="bg-green-500 hover:bg-green-600 text-white py-1 sm:py-2 rounded-lg text-xs transition-colors">
-            Librarian
-          </button>
-        </div>
+      
+
+
+    <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 mt-4 sm:mt-6">
+      <button className="bg-blue-700 hover:bg-blue-800 text-white py-1 sm:py-2 rounded-lg text-xs transition-colors cursor-pointer flex items-center justify-center gap-2">
+        <Shield size={16} />
+        Super Admin
+      </button>
+      <button className="bg-blue-500 hover:bg-blue-600 text-white py-1 sm:py-2 rounded-lg text-xs transition-colors cursor-pointer flex items-center justify-center gap-2">
+        <User size={16} />
+        Admin
+      </button>
+      <button className="bg-purple-500 hover:bg-purple-600 text-white py-1 sm:py-2 rounded-lg text-xs transition-colors cursor-pointer flex items-center justify-center gap-2">
+        <Users size={16} />
+        Teacher
+      </button>
+      <button className="bg-gray-600 hover:bg-gray-700 text-white py-1 sm:py-2 rounded-lg text-xs transition-colors cursor-pointer flex items-center justify-center gap-2">
+        <Calculator size={16} />
+        Accountant
+      </button>
+      <button className="bg-red-500 hover:bg-red-600 text-white py-1 sm:py-2 rounded-lg text-xs transition-colors cursor-pointer flex items-center justify-center gap-2">
+        <Phone size={16} />
+        Receptionist
+      </button>
+      <button className="bg-green-500 hover:bg-green-600 text-white py-1 sm:py-2 rounded-lg text-xs transition-colors cursor-pointer flex items-center justify-center gap-2">
+        <BookOpen size={16} />
+        Librarian
+      </button>
+    </div>
+  
+
 
         <p className="text-xs text-gray-500 mt-4 sm:mt-6 text-center italic">
           *Note: Select Class 4 and Section A for demo testing.
